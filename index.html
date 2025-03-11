@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Term Project</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/index.css">
+    
+
+</head>
+<style>
+    .image-container {
+        background: red url(media/background.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: scroll;
+          background-position: center;
+    }
+</style>
+<body style="background-image: url(media/cardbg.jpg); background-size: cover;">
+    <div class="container">
+    <header>
+        <nav>
+            <a href="readme.txt">Read Me</a>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    <div class="image-container">
+        <img src="media/pokemon-logo-black-transparent.png" alt="Pokemon" class="responsive">
+        <div id="pokemonText" class="pokemon-text">blanktextblanktext</div>
+</div>
+    </div>
+
+    <nav>
+        <img src="media/snorlax.png" alt="snorlax" width="50px">
+        <a href="#" class="button" onclick="toggleDescription(event, 'pacDesc')">Pac-émon</a>
+        <a href="#" class="button" onclick="toggleDescription(event, 'dragDesc')">Match it</a>
+        <a href="#" class="button" onclick="toggleDescription(event, 'medicDesc')">Medic!</a>
+        <img src="media/snorlax.png" alt="snorlax" width="50px">
+    </nav>
+    
+    <div class="description-container">
+        <div class="description" id="pacDesc">
+            <p>Escape Team Rocket in this Pac-Man themed game!</p>
+            <p><a href="#"><img src="media/ss.png" alt="Pac-émon Game Image" width="200px"></a></p>
+            <a href="pac.html" class="button">Click to Play</a>
+        </div>
+    </div>
+    
+    <div class="description-container">
+        <div class="description" id="dragDesc">
+            <p>Match Pokémon in this matching game!</p>
+            <p><a href="#"><img src="media/132.png" alt="Drag Game Image" width="200px"></a></p>
+            <a href="drag.html" class="button">Click to Play</a>
+        </div>
+    </div>
+    
+    <div class="description-container">
+        <div class="description" id="medicDesc">
+            <p>Avoid obstacles and get to the Pokémon Center!</p>
+            <p><a href="#"><img src="media/Pokémon_Center_inside_FRLG.png" alt="Medic Game Image" width="200px"></a></p>
+            <a href="medic.html" class="button">Click to Play</a>
+        </div>
+    </div>
+    
+    
+    
+<script src="js/poke.js"></script>
+</body>
+</html>
+

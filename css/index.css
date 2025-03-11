@@ -1,0 +1,151 @@
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+      .container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 0.5rem;
+      }
+  
+  body {
+      background-color: white;
+      padding-top: 60px; 
+  }
+  
+      header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background-color: black;
+          color: white;
+          padding: 2px;
+          text-align: center;
+          font-family: "Press Start 2P", system-ui;
+          z-index: 1000; 
+          } 
+  
+      header:hover {
+          color: rgb(230, 29, 29);
+      }
+  
+      .image-container {
+          margin: 0;
+          padding: 0;
+          width: 2000px;
+          height: 700px;
+          border: solid black 4px;
+          color: black;
+          position: relative; 
+          z-index: 0;
+      }
+  
+  
+  
+      h1 {
+          font-size: 70px;
+      }
+  
+      nav {
+          margin: 10px;
+          font-size: 30px;
+          text-align: center;
+      
+  
+      }
+      nav a {
+      color: white;
+      text-decoration: none;
+  }
+  
+  nav a:hover {
+      color: rgb(230, 29, 29);
+  }
+  
+  
+      article {
+          float: right;
+          width: 45%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 0.25rem;
+      }
+      
+      aside {
+          float: right;
+          width: 35%;
+      }
+  
+      ul li {
+          font-size: 30px;
+      }
+  
+      p {
+          font-size: 40px;
+      }
+  
+  /* Initially hide all descriptions */
+.description {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional background color */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Style for the buttons */
+.button {
+    background-color: rgb(245, 188, 0);
+    border: none;
+    color: rgb(245, 232, 212);
+    padding: 10px 20px;
+    font-family: "Press Start 2P", system-ui;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: darkblue;
+}
+
+
+  
+      .responsive {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      height: auto;
+      z-index: -1;
+      pointer-events: none;
+  }
+  
+        .pokemon-text {
+      display: none;
+      font-size: 3rem;
+      color: rgb(255, 255, 255, 0.0);
+      text-align: center;
+  }
+  
+  
+  @media (max-width: 600px) {
+      #pokemonImage {
+          display: none;
+      }
+      
+      #pokemonText {
+          display: block; 
+      }
+  }
+  
