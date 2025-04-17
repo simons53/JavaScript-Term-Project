@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="background-image: url('media/scale.jpg'); background-repeat: no-repeat; background-size: cover;"></body>
+    <body  onload="getFocus();">
+        <section>
+            <h1>What is your BMI?</h1>
+            <form action="" id="bmiForm">
+                <p style="text-align:left;">
+                    <label class="labelDisplay" for="height">Height(in)</label><input class="formEntry" type="text" id="height" value="" size="10" style="text-align:center;"/><br />
+                    <label class="labelDisplay" for="weight">Weight (lbs)</label><input class="formEntry" type="text" id="weight" value=""  size="10" style="text-align:center;"/>
+                <p>
+                <input class="inputButton" type="button" value="Calculate" onclick="calcBMI()"/>
+                <input class="inputButton" type="reset" value="Reset" onclick="getFocus()" />
+                <hr/>
+                </p>
+                <p id="msg" style="font-size:20pt;font-weight:900;text-align:center;"></p>
+            </form>
+        </section>
+        <script src="js/bmi.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+</head>
+<body>
+    <style>
+        section{
+  display:flex;
+  flex-wrap:wrap;
+}
+p{
+	flex:1;
+	width:200px;
+}
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <h1>Put the Pokemon into their Pokeballs!</h1>
+    <h2>Move the Pokemon and Pokeballs by dragging!</h2>
+    <section>
+        <p id="MoveMe1"><img src="media/fb.png" /></p>
+        <p id="MoveMe2"><img src="media/poke.png" /></p>          
+        <p id="MoveMe3"><img src="media/mb.png" /></p>
+        <p id="MoveMe4"><img src="media/Pokemans_069.webp" /></p>
+        <p id="MoveMe5"><img src="media/togepi-scaled-1.png" /></p>
+        <p id="MoveMe6"><img src="media/d2bc937de11f0b491d3861c850f51f07.png" /></p>
+        </section>
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script>
+
+$(function()
+        {
+            $("#MoveMe1").draggable();
+            $("#MoveMe2").draggable();
+            $("#MoveMe3").draggable();
+            $("#MoveMe4").draggable();
+            $("#MoveMe5").draggable();
+            $("#MoveMe6").draggable();                     
+            
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+@font-face {
+    font-family: Caviar_Dreams_Bold;
+    src: url(../fonts/Caviar_Dreams_Bold.ttf);
+}
+body{
+	font-family: Caviar_Dreams_Bold;
+    color:black;
+    font-size:14pt;
+    background-color:#daf0df;
+}
+
+div{
+	text-align:center;
+	background-color:#d4eca7;
+	width:600px; 
+	padding:10px;
+	opacity:.6;
+}
+h1{
+	font-size:24pt;
+	float:left;
+	margin-top:10px;
+}
+input:focus { 
+    background-color: #1a5e30;
+    color:rgb(242, 245, 238);
+}
+p{
+	font-size:12pt;
+	text-align:center;
+}
+.inputButton{
+	font-size:14pt;
+	width: 200px; 
+	height: 60px;
+	font-size:12pt;
+	background-color: #08361a;
+	color:white;
+}
+.formEntry{
+	text-align:center;
+	width:200px;
+	height:30px;
+	font-size:12pt;
+}
+.output{
+	border:5px double #095315; 
+	border-right:none;
+	border-left:none;
+	font-size:16pt;
+	padding:20px;
+	background-color:rgb(208, 230, 213);
+	text-align:left;
+}
+.center{
+	margin-left:auto;
+	margin-right:auto;
+}

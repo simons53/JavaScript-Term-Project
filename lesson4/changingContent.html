@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Battle</title>
+</head>
+<body>
+    <section id="section1">
+        <h3>POKEDEX</h3>
+        <p>Enter a number between 0 and 8 to change the Pokedex color:</p>
+        <input id="choice" type="number" max="8" min="0" onchange="getColor()">
+        <p id="color"></p>
+        <p>Select a color for your text and watch it change: <input type="color" id="txtColor" onchange="changeText()"></p>
+
+        <h1>Currently battling:</h1>
+        <p id="currentBattle">Waiting for battle...</p> 
+
+        <h1>Remaining Pokemon: </h1>
+        <p id="p1">Magikarp</p>
+        <p id="p2">Snivy</p>
+        <p id="p3">Ekans</p>
+        <button id="tradeButton" type="button" onClick="changeSentence()">Trade Snivy for Togepi?</button>
+        <button id="updateButton" type="button" onClick="updatePokemon()">Update Pokemon</button>
+       
+    </section>
+
+    <script>
+        function getColor()
+{
+	var colors=["lemonchiffon", "peachpuff", "linen", "aliceblue", "beige", "lightgoldenrodyellow", "lightslategrey", "lightcyan", "lavender"];
+	var sub=parseInt(document.getElementById("choice").value);
+	document.getElementById("color").innerHTML = colors[sub];
+	document.body.style.background = colors[sub];
+}
+
+function changeText() {
+	document.body.style.color = document.getElementById("txtColor").value;
+}
+        var msg = prompt("Enter the name of the Pokemon you're battling: ");
+        if (msg){
+            var currentBattle = document.getElementById("currentBattle");
+            currentBattle.textContent = msg;
+        
+        }
+
+        var choice = parseInt(prompt("Which Pokemon would you like to enter the battle?  1 for Magikarp, 2 for Snivy, or 3 for Ekans"));
+ 	while (isNaN(choice)|| choice<1 || choice>3)
+ 		{
+            choice = parseInt(prompt("Invalid choice. Please choose a Pokemon by entering 1, 2, or 3."));
+        }
+
+    var parent = document.getElementById("section1");
+
+	var child = document.getElementById("p"+ choice);
+	parent.removeChild(child);
+
+    if (choice === 2) {
+            document.getElementById("tradeButton").disabled = true;
+            
+            var msgPara = document.createElement("p");
+            var msgNode = document.createTextNode("Can't trade! Snivy is currently in battle!");
+            msgPara.appendChild(msgNode);
+            parent.appendChild(msgPara);
+            
+        }
+
+    function changeSentence(){
+		var para = document.createElement("p");
+		var node = document.createTextNode('Togepi');
+		para.appendChild(node);
+		var parent = document.getElementById("section1");
+		var child = document.getElementById("p2");
+		parent.replaceChild(para, child);
+    }
+
+    function updatePokemon() {
+            var newPokemon = prompt("Enter the name of the new Pokemon you're battling: ");
+            if (newPokemon) {
+                var currentBattle = document.getElementById("currentBattle");
+                currentBattle.textContent = "Currently battling: " + newPokemon;
+            }
+        }
+    </script>
+</body>
+</html>

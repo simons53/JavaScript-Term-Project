@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Egg</title>
+    <link rel="stylesheet" href="css/jqueryaccord.css">
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/black-tie/jquery-ui.css" rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+</head>
+<script>
+    $(function() {
+       $( "#accordion-menu" ).accordion({
+           collapsible:true
+       });
+        $( "#accordion-menu" ).accordion({
+            header:"ui-icon-triangle-1-e",
+            activeHeader: "ui-icon-triangle-1-s"
+        });   
+    });
+ </script>
+<body>
+ 
+    <h1>Learn about Pokemon!</h1>
+    <nav>
+        <div id="accordion-menu">
+            <h2>Mew</h2>
+            <div>
+                <h3>Mew</h3>
+                <h4>Generation I</h4>
+                <img src="media/mewcard.jpg" alt="mew pokemon image">
+                <p>Mew (Japanese: ミュウ Mew) is a Psychic-type Mythical Pokémon introduced in Generation I.</p> 
+                <p>It is not known to evolve into or from any other Pokémon.</p> 
+                <p>Mew is notable for its unique ability to learn every Technical Machine, Technical Record, Hidden Machine, and Move Tutor move (except those exclusive to a particular Pokémon or group of Pokémon, such as Volt Tackle and Secret Sword).</p> 
+                <p>It is associated with Mewtwo, and thus they are collectively referred to as the Mew duo by fans.</p>
+                <p>Mew was first officially revealed in the May 1996 issue of CoroCoro,[1] less than two months after Pokémon Red and Green were released in Japan.</p>
+            </div>
+            <h2>Mimikyu</h2>
+            <div>
+                <h3>Mimikyu</h3>
+                <h4>Generation VII</h4>
+                <img src="media/mimikyucard.jpg" alt="mew pokemon image">
+                <p>Mimikyu (Japanese: ミミッキュ Mimikkyu) is a dual-type Ghost/Fairy Pokémon introduced in Generation VII.</p> 
+                <p>While it is not known to evolve into or from any other Pokémon, Mimikyu changes forms, from Disguised Form into Busted Form, when it is hit by an attack.</p> 
+                <p>This Pokémon lives in dark places untouched by sunlight. When it appears before humans, it hides itself under a cloth that resembles a Pikachu.</p> 
+            </div>
+           <h2>Vaporeon</h2>
+            <div>
+                <h3>Vaporeon</h3>
+                <h4>Generation I</h4>
+                <img src="media/vaporeoncard.jpg" alt="mew pokemon image">
+                <p>Vaporeon (Japanese: シャワーズ Showers) is a Water-type Pokémon introduced in Generation I.</p> 
+                <p>It evolves from Eevee when exposed to a Water Stone.</p> 
+                <p>It is one of Eevee's final forms, the others being Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, and Sylveon.</p> 
+            </div>
+        </div>
+    </nav>
+ 
+    
+</body>
+</html>

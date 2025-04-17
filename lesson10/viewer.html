@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 11: Content Panels - Photo Viewer</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/viewer.css" />
+  </head>
+
+  <body>
+
+    <section class="page panel">
+      <img src="media/poklogo.jpg" alt="Pokemon Logo" width="100%">
+      <div class="gallery">
+        <div id="photo-viewer"></div>
+        <div id="thumbnails">
+          <a href="media/mewcard.jpg" class="thumb active" title="Mew Card"><img src="media/mewmini.png" width="70px" alt="Mew"/></a>
+          <a href="media/mimikyucard.jpg" class="thumb" title="Mimikyu Card"><img src="media/mimimini.png" alt="Mimikyu" width="80px" /></a>
+          <a href="media/vaporeoncard.jpg" class="thumb" title="Vaporeon Card"><img src="media/vapomini.png" alt="Vaporeon" width="70px" /></a>
+        </div>
+      </div>
+      <div class="description">
+        <p class="standfirst">Pokémon are mysterious creatures filled with many secrets. Some Pokémon live alongside humans and some live in the wild in grassy fields, caves, or the sea, but much about their ecology that remains unknown. One of their main features is that they can be caught using a Poké Ball, which allows them to be carried around.</p>
+        <p><strong>$19.98</strong> / 50 cards</p>
+        <a href="" id="buy">Buy cards now</a>
+      </div>
+    </section>
+
+
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/black-tie/jquery-ui.css" rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="js/photo-viewer.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,33 @@
+﻿h1{
+	color:darkblue;
+	text-shadow:2px 2px lightblue;
+	font-size:30pt;
+	font-family:"Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	text-align:center;
+}
+body{
+	font-family:"Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	background:url('../media/smoke-genie.jpg');
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+button{
+	background:lightblue;
+	box-shadow:4px 4px black;
+	color:deeppink;
+	font-size:1.2em;
+}
+.pink{
+	color:deeppink;
+	font-weight:bold;
+	text-align:center;
+	font-size:2em;
+	outline: 2px solid deeppink;
+}
+section{
+	background-color:white; 
+	width:550px; 
+	border:5px darkblue groove; 
+	padding:10px;
+	opacity:0.95;"
+}

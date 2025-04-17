@@ -1,0 +1,78 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Customer Inquiry Form</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<link href="css/vacationClub.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<section class="container">
+  <form action="vacationConfirmation.html" name="registration" method="post">
+    <fieldset>
+      <legend>
+      <h2>Registration</h2>
+      </legend>
+      <label for="firstname" style="margin-top:20px;">First Name</label>
+      <input type="text" name="firstname" id="firstname" placeholder="Scooby" required />
+      <label for="lastname" style="margin-top:20px;">Last Name</label>
+      <input type="text" name="lastname" id="lastname" placeholder="Doo" required/>
+      <label for="email" style="margin-top:20px;">Email</label>
+      <input type="email" name="email" id="email" placeholder="scooby@snacks.net" required/>
+    </fieldset>
+    <fieldset style="margin-top:25px;">
+      <legend>
+      <h2>Preferences</h2>
+      </legend>
+      <label for="season"  style="margin-top:25px;" >Time of Year
+        <input list="season" name="season" style="width:100px;" required >
+        <datalist id="season" >
+          <option>Winter</option>
+          <option>Spring</option>
+          <option>Summer</option>
+          <option>Fall</option>
+          <option>No Preference</option>
+        </datalist>
+      </label>
+      <label for="Accomodations"  style="margin-top:25px;" >
+      <table  style="width:100%;text-align:center;margin:auto;border:none;font-weight:900;">
+        <tr>
+          <td><label for="5star">5 star hotel or resort
+              <input type="checkbox" class="checkbox"  id="star5" value="5 Star Hotel" name="accomodations[]"  required minlength="1" />
+            </label></td>
+          <td><label for="rentalhouse">Rental home or bungalow
+              <input type="checkbox" class="checkbox"  id="rentalhouse" name="accomodations[]" value="Rental house or bungalow" />
+            </label></td>
+          <td><label for="pool">Indoor/Outdoor Pool
+              <input type="checkbox" class="checkbox"  id="pool" name="accomodations[]" value="Indoor/Outdoor Pool" />
+            </label></td>
+        </tr>
+        <tr>
+          <td><label for="fitness">Fitness Facilities
+              <input type="checkbox" class="checkbox"  id="fitness" name="accomodations[]" value="Fitness Facilities" />
+            </label></td>
+          <td><label for="dining">Restaurants
+              <input type="checkbox" class="checkbox"  id="dining" name="accomodations[]" value="Onsite Fine Dining" />
+            </label></td>
+          <td><label for="golf">Tennis or Golf
+              <input type="checkbox" class="checkbox"  id="golf" name="accomodations[]" value="Tennis or Golf" />
+            </label></td>
+        </tr>
+        <tr>
+          <td colspan="2"><label for="roomammenities">Microwave, coffee, television, free wifi, air conditioning.
+              <input type="checkbox" class="checkbox"  id="roomammenities" name="accomodations[]" value="roomamenities" />
+            </label></td>
+          <td ><label for="beach">Beach and boat rentals
+              <input type="checkbox" class="checkbox"  id="beach" name="accomodations[]" value="Beach" />
+            </label></td>
+        </tr>
+      </table>
+      </label>
+    </fieldset>
+    <button type="submit" id="sub">Register</button>
+  </form>
+</section>
+<script src="js/vacationClubJQuery.js"></script>
+</body>
+</html>

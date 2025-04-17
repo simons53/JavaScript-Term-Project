@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Image Collection</title>
+<style>
+
+a{
+	padding-right:10px;
+}
+
+nav a:hover{
+	background-color:rgb(139, 172, 19);
+}
+
+a:hover{
+	background-color:white;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    background-color: rgb(250, 250, 250);
+}
+
+</style>
+</head>
+<body onload="processName();">
+<hr>
+<a href="media/bridge-3732395_1280.jpg">
+<img alt="Harry Potter Bridge" class="auto-style2" src="media/bridge-3732395_1280.jpg" style="width: 250px; height: 188px">
+</a>
+<a href="media/harry-potter-2367608_1280.jpg">
+<img alt="Hogwarts Corridor" class="auto-style2" src="media/harry-potter-2367608_1280.jpg" style="width: 250px; height: 188px">
+</a>
+<a href="media/travel-3238442_1280.jpg">
+<img alt="Hogwarts Express" class="auto-style2" src="media/travel-3238442_1280.jpg" style="width: 250px; height: 188px">
+</a>
+<a href="media/trinity-college-library-5174182_1280.jpg">
+<img alt="Hogwarts Library" class="auto-style2" src="media/trinity-college-library-5174182_1280.jpg" style="width: 250px; height: 188px">
+</a>
+<hr>
+<h3>Photo Name:</h3>
+<p id="name">
+	<script>
+	// Displays the text from the alt attribute as the Image Name
+	function processName()
+	{
+		var contents = "";
+		// concatenate each alternate name
+		for ( var i = 0; i < document.images.length; i++ )
+		{
+		     contents += i+1 + ". " +  document.images[i].alt + "&nbsp;&nbsp; ";
+		} // end for
+		document.getElementById( "name" ).innerHTML = contents;
+		// calls function proccessSource in script below
+		processSource();  
+	}	
+	</script>
+</p>
+<h3>Photo Source</h3>
+<p id="source">
+	<script>
+	function processSource()
+	{
+		var contents = "";
+
+		for ( var i = 0; i < document.images.length; i++ )
+		{
+			  contents += i+1 + ". " +  document.images[i].src + "&nbsp;&nbsp; ";
+	}
+	document.getElementById( "source" ).innerHTML = contents;
+
+	processLinks();
+	}
+	</script>
+</p>
+<h3>Photo Text Links</h3>
+	<nav id="links">
+	<script>
+
+		function processLinks()
+		{
+			var contents = "| ";
+			for ( var i = 0; i < document.links.length; i++ )
+			{
+			   contents += "<a href=" + document.links[i].href + ">" + document.images[i].alt + "</a>  | ";
+			} 
+			document.getElementById( "links" ).innerHTML = contents;
+		} 
+	</script>
+	</nav>
+<hr>
+</body>
+</html>

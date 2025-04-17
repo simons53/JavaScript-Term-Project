@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pokemon>
+    <card>
+        <poke>Tangela</poke>
+        <gen>Generation I</gen>
+        <type>Grass</type>
+        <ability1>Chlorophyll</ability1>
+        <ability2>Regenerator</ability2>
+        <catchrate>11.9%</catchrate>
+        <pdexNum>#0114</pdexNum>
+    </card>
+    <card>
+        <poke>Onix</poke>
+        <gen>Generation I</gen>
+        <type>Rock | Ground</type>
+        <ability1>Rock Head</ability1>
+        <ability2>Weak Armor</ability2>
+        <catchrate>11.9%</catchrate>
+        <pdexNum>#0095</pdexNum>
+    </card>
+    <card>
+        <poke>Purrloin</poke>
+        <gen>Generation V</gen>
+        <type>Dark</type>
+        <ability1>Limber</ability1>
+        <ability2>Prankster</ability2>
+        <catchrate>43.9%</catchrate>
+        <pdexNum>#0509</pdexNum>
+    </card>
+    <card>
+        <poke>Piplup</poke>
+        <gen>Generation IV</gen>
+        <type>Water</type>
+        <ability1>Torrent</ability1>
+        <ability2>Competitive</ability2>
+        <catchrate>11.9%</catchrate>
+        <pdexNum>#0393</pdexNum>
+    </card>
+</pokemon>

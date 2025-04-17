@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>How Old Are You</title>
+<style>
+body {
+    font-family: sans-serif;
+    background-image: url('media/birthday.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: darkblue;
+    font-size: 14pt;
+}
+section {
+    margin-left: 100px;
+    background-color: white;
+    width: 500px;
+    padding: 10px;
+    box-shadow: 10px 10px 10px red;
+}
+h1 {
+    font-size: 28pt;
+    text-align: center;
+}
+input:focus {
+    background-color: blue;
+    color: white;
+}
+p {
+    text-align: center;
+    font-size: 14pt;
+    font-weight: 900;
+}
+.inputButton {
+    font-size: 14pt;
+    width: 100px;
+    height: 30px;
+    font-size: 12pt;
+    background-color: blue;
+    color: white;
+}
+.formEntry {
+    text-align: center;
+    width: 100px;
+    height: 20px;
+    font-size: 14pt;
+    color: blue;
+}
+.labelDisplay {
+    width: 300px;
+    text-align: right;
+    float: left;
+}
+</style>
+</head>
+<body>
+<section>
+  <h1>How Old Are You?</h1>
+  <form action="" id="ageCalc">
+    <p style="text-align:left;">
+      <label class="labelDisplay" for="age">Age(years)</label>
+      <input class="formEntry" type="text" id="age" value="" size="10" style="text-align:center;"/>
+      <br />
+      <label class="labelDisplay" for="months">Months til Birthday (0-12)</label>
+      <input class="formEntry" type="text" id="months" value=""  size="10" style="text-align:center;"/>
+    <p>
+      <button class="inputButton" type="button" id="calculate">Calculate</button>
+      <button class="inputButton" type="reset" id="reset">Reset</button>
+    </p>
+    <hr>
+    <p id="msg" style="font-size:20pt;font-weight:900;text-align:center;"></p>
+  </form>
+</section>
+<script>
+document.getElementById("calculate").addEventListener("click",function(){
+    try {
+        var age = parseFloat(document.getElementById("age").value);
+        var months = parseFloat(document.getElementById("months").value);
+        
+        if (age == "" || months == "") {
+            throw "You need to enter a valid number for age and months, try again!";
+        }
+        
+        if (isNaN(age) || isNaN(months)) {
+            throw "You need to enter a valid number for age and months, try again!";
+        }
+        
+        if (months < 1 || months > 12) {
+            throw "Months needs to be a number between 1 and 12, please try again!";
+        }
+        
+        var currentMonths = Math.floor(12 - months);
+        document.getElementById("msg").innerHTML = "Your current age is: " + age + " years and " + currentMonths + " months";
+    }
+    catch (errMsg) {
+        document.getElementById("msg").innerHTML = errMsg;
+    }
+});
+document.onload=getFocus();
+document.getElementById("reset").addEventListener("click",function(){
+     getFocus();
+});
+                                                 
+function getFocus(){
+	document.getElementById("age").focus();
+	document.getElementById("msg").innerHTML=" ";
+}
+</script>
+</body>
+</html>

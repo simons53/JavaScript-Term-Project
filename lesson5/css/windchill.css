@@ -1,0 +1,80 @@
+﻿.center{
+	margin-right:auto;
+	margin-left:auto;
+}
+@font-face{
+	font-family: coldFont;
+    src: url(../fonts/chiller.ttf);
+}
+@font-face{
+	font-family:normal;
+	src:url(../fonts/Caviar_Dreams_Bold.ttf);
+}
+@font-face{	
+	font-family: hotFont;
+    src: url(../fonts/melted.ttf);
+}
+
+#cold{
+	font-family:coldFont, sans-serif;
+	color:blue;
+	text-shadow:2px 2px 2px lightblue;
+	font-size:30pt;
+	padding:10px;	
+	font-weight:900;
+}
+#hot{
+	font-family:hotFont, sans-serif;
+	color:red;
+	text-shadow:2px 2px 2px pink;
+	font-size:30pt;
+	padding:10px;	
+
+}
+#normal{
+	font-family:normal, sans-serif;
+	color:#787cce;
+	text-shadow : -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-size:30pt;
+	padding:10px;
+}
+#error{
+	font-family:courier, sans-serif;
+	color:red;
+	font-size:16pt;
+	padding:10px;
+	font-weight:900;
+
+}
+input:focus { 
+    background-color:#4a4c7e;
+    color:white;
+}
+body{
+	background-image:url('../media/coldWinter.jpg'); 
+	background-repeat:no-repeat;
+	background-color:black; 
+	background-position:center top;
+}
+section{
+	background-color:white; 
+	opacity:.9; 
+	text-align:center; 
+	padding-top:1%;
+	padding-bottom:1%;
+	width:30%;
+	box-shadow:10px 10px 4px black;
+}
+h1{
+	font-family:coldFont, sans-serif;
+	text-shadow:6px 6px 6px white;
+	font-weight:900;
+	text-align:center;
+	font-size:48pt;
+	color:black;
+	margin-top:10px;
+}
+input{
+	text-align:center;
+}
+

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>My Favorite Foods</title>
+<style>
+body{
+	background-image:url('media/Food.jpg');
+	background-repeat:no-repeat;
+	background-position:left;
+	background-size:contain;
+	min-width:300px;
+	min-height:400px;
+	max-width:500px;
+}
+h1{
+	color:tan;
+	font-size:2em;
+	text-shadow:2px 2px black;
+	font-family:Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;	
+}
+ol{
+	outline:5px tan inset;
+	background-color:linen;
+	opacity:.8;
+	padding:1%;
+	min-width:200px;
+	max-width:400px;
+}
+li{
+	font-family:"Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	line-height:110%;
+	list-style-position:inside;
+}
+</style>
+</head>
+<body>
+<script>
+	var favFood=[];
+var number = prompt("How many favorite foods do you have?");
+while(isNaN(number))
+    number= prompt("Please enter a valid number!  How many favorite foods do you have?");
+var counter, displayCounter;
+for (counter=0; counter<number; counter++){
+
+    displayCounter=counter+1;
+    favFood[counter] = prompt("Enter favorite number #" + displayCounter);
+}
+document.writeln("<h1>Here are your favorite foods!</h1>");
+document.write("<ol>");
+for (counter=0; counter<number; counter++){
+    document.write("<li>" + favFood[counter] + "</li>");
+}
+document.write("</ol>");
+
+
+</script>
+</body>
+</html>

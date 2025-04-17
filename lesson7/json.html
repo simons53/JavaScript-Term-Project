@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body style="background-image:url('media/Loading_Screen_Haven.webp'); background-repeat:repeat-y;">
+<div style="background-color:white;opacity:.8; width:25%;padding:3%; margin: 40px;">
+<img src="media/Valorant_logo_-_pink_color_version.svg.png" alt="val logo" width="200px">
+<p id="content"></p>
+</div>
+<style>
+     .strong {
+        color: rgb(241, 0, 0);
+    }
+
+    
+</style>
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function() {
+        if(xhr.status === 200) {
+            responseObject = JSON.parse(xhr.responseText);
+            var newContent = '';
+            for (var i = 0; i < responseObject.agents.length; i++) { 
+                newContent += '<p><span class="strong">Agent:</span> ' + responseObject.agents[i].Agent + '<br>';
+                newContent += '<span class="strong">Ability 1: </span>' + responseObject.agents[i].Abil1 + '<br>';
+                newContent += '<span class="strong">Ultimate:</span> ' + responseObject.agents[i].Ult + '</p>';
+                newContent += '<hr>';
+            }
+            document.getElementById('content').innerHTML = newContent;
+        }
+    };
+    xhr.open('GET', 'val.json', true);
+    xhr.send(null);
+</script>
+</body>
+</html>

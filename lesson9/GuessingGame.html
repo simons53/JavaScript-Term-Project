@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8>
+<title>Guessing Game Genie</title>
+<link href="css/guessingGame.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<article>
+		<section>
+			<header>
+				<h1>Guessing Game Genie</h1>
+				<p>Number of Tries:<input type="text" id="tries" value=" " style="width: 60px">
+				<button id="getNumber" style="float:right;">Start or Start Over</button></p>
+			</header>
+			<h4>Pick a number between 1 and 100 and I will tell you if you are high or low.&nbsp; 
+			See how many tries it takes before you can guess the number. Click START to begin game</h4>
+			<div style="display:inline-flex; background-color:lightblue; width:100%">
+				<p>Your Guess<input type="text" id="guess" value=" " style="width: 60px">&nbsp;&nbsp;
+				<button id="checkGuess" >Check your Guess</button></p>
+			</div>
+			<div style="text-align:center;">
+				<textarea rows="4" cols="30" id="comments" class="pink"  ></textarea>
+			</div>
+		</section>
+	</article>
+<script src="js/guessingGame.js"></script>	
+</body>
+</html>

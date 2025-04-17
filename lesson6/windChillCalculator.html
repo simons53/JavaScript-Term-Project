@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Wind Chill Factor</title>
+<link href="css/windchill.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<header><h1>Wind Chill Factor</h1></header>
+	<section class="center">
+		<form action="" method=post name=windchillform id="windchillform">
+			<p>Wind Speed (MPH) =<input type=text id=wind value="" size=6></p>
+			<p>Air Temperature (ºF) =<input type=text id=temp value="" size=6></p>
+			<p><button type="button" id="calc" >Calculate Wind Chill</button>
+			<button type="reset" id="reset">Reset</button></p>
+			<hr/>
+			<p id="results"></p>
+		</form>
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/windchill.js"></script>
+</body>
+</html>

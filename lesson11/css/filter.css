@@ -1,0 +1,30 @@
+header {
+    font-size: 60px;
+    text-align: center;
+    background-color: rgb(85, 83, 81);
+    color: white;
+    border: 7px rgb(233, 160, 160) solid;
+    margin: 15px;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+img {
+    border: 7px rgb(233, 160, 160) solid;
+    margin: 5px;
+    padding: 10px;
+    box-shadow:  rgb(85, 83, 81) 3px 3px;
+}
+
+#buttons button {
+    background-color: rgb(233, 160, 160); 
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px; 
+}
+

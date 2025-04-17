@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Modal</title>
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+	<section>
+    <header><img src="media/vallogo.png" alt="Valorant Logo" width="40%"></header>
+      <img src="media/fade.jpeg" alt="Fade Abyss Image" style="border:10px groove white; width:100%; "/>
+  
+      
+      <button id="myBtn">Download Valorant</button>
+
+
+
+<div id="myModal" class="modal">
+
+
+  <div class="modal-content">
+    <p>Valorant is a 2020 first-person tactical hero shooter video game developed and published by Riot Games. A free-to-play game, Valorant takes inspiration from the Counter-Strike series, borrowing several mechanics such as the buy menu, spray patterns, and inaccuracy while moving. Download here:</p></a>
+    <span class="close">&times;</span>
+    <p id="link" class="icon-bar"><a href="https://playvalorant.com/en-us/download/"><i class="fa fa-download"></i>
+  
+
+        <script>
+            var modal = document.getElementById('myModal');
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+        </script>
+  </section>
+  </body>
+</html>

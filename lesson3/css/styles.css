@@ -1,0 +1,47 @@
+body{
+	font-family: sans-serif;
+    background-size:cover;
+    color:rgb(180, 31, 5);
+    font-size:14pt;
+}
+section{
+	margin: 0 auto; 
+	margin-top: 300px;
+	width:500px;
+	background-color:antiquewhite;
+	padding:50px;
+	box-shadow:10px 10px 10px rgb(180, 31, 5);
+}
+h1{
+	font-size:28pt;
+	text-align:center;
+}
+input:focus { 
+    background-color:rgb(180, 31, 5);
+    color:white;
+}
+p{
+	text-align:center;
+	font-size:14pt;
+	font-weight:900;
+}
+.inputButton{
+	font-size:14pt;
+	width: 100px; 
+	height: 30px;
+	font-size:12pt;
+	background-color: rgb(180, 31, 5);
+	color:white;
+}
+.formEntry{
+	text-align:center;
+	width:100px;
+	height:20px;
+	font-size:14pt;
+	color:rgb(180, 31, 5);
+}
+.labelDisplay{
+	width:300px;
+	text-align:right;
+	float:left;
+}

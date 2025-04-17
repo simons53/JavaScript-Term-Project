@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Events</title>
+    <link rel="stylesheet" href="css/BOM-events.css">
+</head>
+<body>
+    <section>
+	<div>
+		<form>
+			<h2>Creating a window</h2>
+			<input type="button" value="Create new window" name="create" id="create" onclick="createWindow()" />&nbsp;&nbsp;&nbsp;
+			<input type="button" value="Close new window" name="close" id="close" onclick="closeWindow()"/><br>
+			<hr>
+			<h2>Modifying a window</h2>
+			<p style="text-align:left;">Enter new dimensions for the window:</p>
+			<p>height(pixels):<input type="text" name="height" id="height" value=""/> </p>
+			<p>width(pixels):<input type="text" name="width" id="width" value=""/></p>
+			<button type="button"  name="resize" id="resize">Resize window</button>
+			<hr> 
+		</form>
+	</div>
+</section>
+<section>
+    <div>
+        <h3>Here is URL info:</h3>
+        <form>
+            <p class="output" id="urlResult" ></p>
+            <p>
+            <button class="inputButton" type="button" id="getURL">Get URL Info</button>
+            <button class="inputButton" type="button" id="newLoc">Navigate to Bulbapedia</button>
+            <button class="inputButton" type="button" id="reload">Reload</button>
+            <button class="inputButton" type="button" id="replace">Replace Page</button>
+            <button class="inputButton" type="button" id="resetURL">Reset</button>
+            </p>
+        </form>
+        <hr />
+    </div>
+</section>
+<section>
+    <div>
+        <h3>Here is your screen info:</h3>
+        <form>
+            <p class="output" id="scrResult" ></p>
+            <button class="inputButton" type="button" id="scrInfo">Get Screen Info</button>
+            <button class="inputButton" type="button" id="clearScreen">Reset</button>
+        </form>
+        <hr />
+    </div>
+</section>
+<section>
+    <div>
+        <h3>Browser Information/Settings:</h3>
+        <form>
+            <p class="output" id="result" ></p>
+            <p>
+            <button class="inputButton" type="button" id="getNav">Get Navigator Info</button>
+            <button class="inputButton" type="button" id="resetBrowser">Reset</button>
+            </p>
+        </form>
+        <hr />
+    </div>
+</section>
+<section>
+    <div style="width:660px;">
+        <h3>Here is Information about your current Window:</h3>
+            <p class="output" id="winResult" ></p>
+        <hr />
+    </div>
+</section>
+<section>
+    <div>
+        <h3>Browser History Information:</h3>
+        <form>
+            <p class="output" id="historyResult"></p>
+            <button class="inputButton" type="button" id="getHistory">Get History Info</button>
+            <button class="inputButton" type="button" id="goBack">Go Back</button>
+            <button class="inputButton" type="button" id="goForward">Go Forward</button>
+        </form>
+        <hr />
+    </div>
+</section>
+
+    <script>
+document.onload=setValues();
+document.getElementById("create").addEventListener("click",function(){
+	myWindow = window.open("","myWindow","width=200, height=100,menubar=1,scrollbars=1,resizable=1");
+	myWindow.document.write("<p>This is 'myWindow'</p>");   
+});
+document.getElementById("close").addEventListener("click", function(){
+	myWindow.close();
+});
+document.getElementById("resize").addEventListener("click",function(){
+	var w = parseInt(document.getElementById("width").value);
+	var h = parseInt(document.getElementById("height").value);	
+	if(w==" "||isNaN(w)||w==0)
+		w=500;
+	if (h==" "||isNaN(h)||h==0)
+		h=300;	
+	myWindow.resizeTo(w,h);
+	myWindow.focus();
+});
+function setValues(){
+	document.getElementById("height").value ="";	
+	document.getElementById('height').focus();
+	document.getElementById("width").value="";
+}
+
+function locationInfo(){
+	document.getElementById("urlResult").innerHTML = "<p>Location hash: " + location.hash + "</p>" + 
+	"<p>Location host: " + location.host + "</p>" + 
+	"<p>Location hostname: " + location.hostname + "</p>" + 
+	"<p>Location hypertext reference: " + location.href + "</p>" + 
+	"<p>Location origin: " + location.origin + "</p>" + 
+	"<p>Location pathname: " + location.pathname + "</p>" + 
+	"<p>Location port: " + location.port + "</p>" + 
+	"<p>Location protocol: " + location.protocol + "</p>" + 
+	"<p>Location search: " + location.search + "</p></div>";
+}
+
+function getFocus(){
+	document.getElementById("urlResult").innerHTML=" ";
+}
+window.document.onload=getFocus();
+document.getElementById("resetURL").addEventListener("click",getFocus);
+document.getElementById("getURL").addEventListener("click",locationInfo);
+
+document.getElementById("newLoc").addEventListener("click", function(){
+	location.assign("https://bulbapedia.bulbagarden.net/wiki/Main_Page");
+});
+document.getElementById("reload").addEventListener("click", function(){
+	location.reload();
+});
+document.getElementById("replace").addEventListener("click", function(){
+	location.replace();
+});
+
+document.getElementById("scrInfo").addEventListener("click",function(){
+	var width=screen.width;
+	var height=screen.height;
+	var availWidth=screen.availWidth;
+	var availHeight=screen.availHeight;
+	var depth=screen.colorDepth;
+	var pixel=screen.pixelDepth;
+	document.getElementById("scrResult").innerHTML = 
+	"<div style='width:300px;font-weight:900;color:black;'><p>Screen Width: " + width + "</p>" + 
+	"<p>Available width: " + availWidth + "</p>" + 
+	"<p>Height: " + height + "</p>" + 
+	"<p>Available height: " + availHeight + "</p>" + 
+	"<p>Color Depth: " + depth + "</p>" + 
+	"<p>Pixel Depth: " + pixel + "</p></div>";
+});
+
+document.getElementById("clearScreen").addEventListener("click",function(){
+	document.getElementById("scrResult").innerHTML=" ";
+});
+
+document.getElementById("resetBrowser").addEventListener("click",function(){
+	document.getElementById("result").innerHTML=" ";
+});
+
+document.getElementById("getNav").addEventListener("click",function(){
+	document.getElementById("result").innerHTML = "<p>Cookies Enabled?: " + 
+	 navigator.cookieEnabled+ "</p>" + 
+	"<p>App Name: " + navigator.appName+ "</p>" + 
+	"<p>App Code Name: " + navigator.appCodeName+ "</p>" + 
+	"<p>Engine Name of Browser: " + navigator.product + "</p>" + 
+	"<p>Application Version: " + navigator.appVersion + "</p>" + 
+	"<p>Applciation user agent: " + navigator.userAgent + "</p>" + 
+	"<p>Platform: " + navigator.platform + "</p>" + 
+	"<p>Java enabled?: " + navigator.javaEnabled()+ "</p>" + 
+	"<p>Language: " + navigator.language + "</p></div>";
+});
+document.getElementById("winResult").innerHTML = 
+	"<p>Height: " + window.innerHeight + "</p>" + 	
+	"<p>Width: " + window.innerWidth + "</p>" + 
+	"<p>Screen X Position: " + window.screenX + "</p>" + 
+	"<p>Screen Y Position: " + window.screenY + "</p>" + 
+	"<p>Scrolled Horizontal Columns: " + window.pageXOffset + "</p>" + 
+	"<p>Scrolled Vertical Lines: " +window.pageYOffset + "</p>"; 
+
+    document.getElementById("getHistory").addEventListener("click", function() {
+    var historyInfo = "History length: " + history.length;
+    document.getElementById("historyResult").innerHTML = historyInfo;
+});
+
+document.getElementById("goBack").addEventListener("click", function() {
+    history.back(); 
+});
+
+document.getElementById("goForward").addEventListener("click", function() {
+    history.forward(); 
+});
+
+    </script>
+</body>
+</html>

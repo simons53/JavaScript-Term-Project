@@ -1,0 +1,130 @@
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /*  use em for size or another relative measurement */
+    font-size: 1em;
+    /* size should be should be cover or contain */
+    background-size: cover;
+    background-repeat:repeat;
+}
+footer, header{
+    background-color: rgb(211, 101, 152);
+   /* opacity is optional - if you have a background photo, it will allow the photo to show through the color */
+    width: 100%
+}
+article{
+   /* use the settings shown below */
+    display: flex;
+    flex-direction:column;
+    height:500px;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+section{
+    flex:1;
+    background-color: rgb(255, 236, 243);
+    /*  use % for padding, height and width */
+    padding: 5%;
+    min-width: 2%;
+    max-width:100%;
+    min-height: 10%;
+   /* opacity is optional - if you have a background photo, it will allow the photo to show through the color */
+  
+}
+h1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   /*  use em for size or another relative measurement */
+    font-size: 2em;
+    color: black;
+    text-shadow: none;
+    text-align: center;
+}
+h2{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+   /*  use em for size or another relative measurement */
+    font-size: 1em;
+    text-shadow: none;
+    /*  use % for width */
+    width: 11%;
+    background-color: pink;
+    /* can use pixels for padding */
+    padding: 1.5em;
+   /* opacity is optional - if you have a background photo, it will allow the photo to show through the color */
+    opacity: 70%;
+    /*  border-radius should be pixels */
+    border-radius: 2px;
+}
+nav {
+    margin:0px;
+    width:100%;
+    height:auto;
+}
+nav ul {
+    background: pink;
+    /* box-shadow settings can be whatever you want */
+    box-shadow: 6px 6px 6px rgb(211, 101, 152);
+    padding: 10px;
+    border-radius: 10px;
+    list-style: none;
+    position: relative;
+    color: pink;
+    /* font-weight can be whatever you want */
+    font-weight:900;
+}
+nav ul li {
+    display:inline-table;
+    margin:10px;
+    padding:5px;
+    color: whitesmoke;
+}
+nav ul li:hover {
+    color: lightskyblue;
+    /*  font-size should be a relative measurement */
+    font-size: 1em;
+}
+nav ul li a {
+    display: block;
+    /* the padding can be in pixels */
+    padding: 2px;
+    color: rgb(185, 54, 126);
+}
+nav ul li:hover a {
+    color: rgb(64, 124, 64);
+    text-decoration: none;
+}
+nav ul li:hover > ul {
+    display:flex;
+    flex-direction:column;
+}
+
+nav ul ul {
+    display: none;
+    background: whitesmoke;
+    /* the border color can be whatever you want */
+    border:2px solid black;
+    border-radius: 0px;
+    padding: 0px;
+    position: absolute;
+   /*  font-size should be a relative measurement */
+    font-size: 1em;
+    z-index:10;
+}
+
+nav ul ul li {
+    display:block;
+    /*  you can adjust the border top and bottom colors to whatever you want */
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    position: relative;
+    text-align: left;
+    background: whitesmoke;
+}
+nav ul ul li a {
+    padding: 15px;
+    color: rgb(64, 124, 64);
+}    
+nav ul ul li a:hover {
+    background: whitesmoke;
+    color: rgb(64, 124, 64);
+}
+

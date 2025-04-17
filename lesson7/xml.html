@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>XML JavaScript</title>
+<style>
+ 
+
+body {
+    background-image: url('media/pikachu-anime-style-desktop-wallpaper-preview-1024x576.jpg');
+    background-position: center;
+    background-size: cover;
+}
+ h2{
+    color: white;
+ }
+.card {
+    background-color: #fcfbfa;
+    border-radius: 10px;
+    opacity: .7;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+    width: 30%;
+    height: 600px;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    font-weight: 900;
+    font-size: 120%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card h3 {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.card p {
+    color: white;
+    margin: 5px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    border-radius: 5px;
+}
+.card1 {
+    background-image: url('media/70e06f6541262ebefb6a60c0e4c990f3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card2 {
+    background-image: url('media/card2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card3 {
+    background-image: url('media/card3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card4 {
+    background-image: url('media/card4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card5 {
+    background-image: url('media/card5.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+button {
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgb(184, 11, 11);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #929090;
+}
+</style>
+</head>
+<body>
+<h2>Pokemon Card Info:</h2>
+<div id="pokeInfo" style="display: flex; flex-wrap: wrap;"></div>
+<button id="load">Get my Pokemon cards</button>
+<script>
+var myCollection = document.getElementById("load");
+myCollection.addEventListener("click", function() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            xmlDoc = xhttp.responseXML;
+            var txt = "";
+            var a = xmlDoc.getElementsByTagName("poke");
+            var t = xmlDoc.getElementsByTagName("gen");
+            var p = xmlDoc.getElementsByTagName("type");
+
+            for (var i = 0; i < a.length; i++) {
+                var cardClass = 'card' + ((i % 5) + 1);
+                txt += "<div class='card " + cardClass + "'>";
+                txt += "<h3>" + a[i].childNodes[0].nodeValue + "</h3>";
+                txt += "<p>" + t[i].childNodes[0].nodeValue + "</p>";
+                txt += "<p>" + p[i].childNodes[0].nodeValue + "</p>";
+                txt += "</div>";
+            }
+
+            document.getElementById("pokeInfo").innerHTML = txt;
+            document.getElementById("load").style.visibility = 'hidden';
+        }
+    };
+    xhttp.open("GET", "card.xml", true);
+    xhttp.send();
+});
+</script>
+</body>
+</html>

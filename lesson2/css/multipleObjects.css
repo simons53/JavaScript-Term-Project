@@ -1,0 +1,36 @@
+
+
+h1 {
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 7vh;
+    text-shadow: -1px -1px 0 #0019fc, 1px -1px 0 #0019fc, -1px 1px 0 #0019fc, 1px 1px 0 #0019fc;
+    color: rgb(255, 208, 0);
+    text-align: center;
+    background: whitesmoke;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: whitesmoke;
+    opacity: 0.7;
+}
+
+h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: whitesmoke;
+    opacity: 0.7;
+}
+
+h4 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+section {
+    background-color: whitesmoke;
+    opacity: 0.7;
+}

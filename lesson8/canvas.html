@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="600" style="border: 10px inset green;">Your browser does not support the HTML5 canvas tag.</canvas>
+    <script>
+           var canvasObj = document.getElementById("myCanvas");
+           var renderObj = canvasObj.getContext("2d");
+           
+           //body
+           renderObj.lineWidth = 5; 
+            renderObj.moveTo(315, 196);
+            renderObj.lineTo(260, 320);
+            renderObj.stroke();
+            //head
+            renderObj.beginPath();
+            renderObj.arc(330,150,50,0,Math.PI*2,true); 
+            renderObj.lineWidth = 5;
+            renderObj.strokeStyle = "black";  
+            renderObj.stroke();  
+            //leg 1
+            renderObj.lineWidth = 5; 
+            renderObj.moveTo(420, 320);
+            renderObj.lineTo(269, 300);
+            renderObj.stroke();
+            //leg 2
+            renderObj.lineWidth = 5; 
+            renderObj.moveTo(400, 360);
+            renderObj.lineTo(257, 320);
+            renderObj.stroke();
+           
+          
+            //arm 
+            renderObj.lineWidth = 5;
+            renderObj.moveTo(310, 210); 
+            renderObj.lineTo(400, 240); 
+            renderObj.stroke();
+
+            renderObj.fillText("Swing", 220, 460);
+            renderObj.fillText("Swing", 280, 460);
+            renderObj.fillText("Swing", 340, 440);
+            renderObj.fillText("Swing", 400, 430);
+            renderObj.fillText("Swing", 460, 400);
+            renderObj.fillText("Swing", 500, 350);
+            renderObj.fillText("Swing", 530, 330);
+
+            //vine 
+            renderObj.beginPath();
+            renderObj.scale(0.1, 1);
+            renderObj.translate(3650, 0);
+            renderObj.moveTo(200,40);
+            renderObj.lineTo(200,105);
+            renderObj.lineTo(805,700);
+            renderObj.fillStyle  = "green";
+            renderObj.fill();
+
+            //obstacle
+            renderObj.fillStyle = "gray";
+            renderObj.fillRect(190,500,200,100);
+   
+
+
+
+    </script>
+</body>
+</html>

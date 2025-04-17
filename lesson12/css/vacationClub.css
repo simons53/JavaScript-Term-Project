@@ -1,0 +1,79 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Nixie+One);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+	font-family: 'Nixie One', cursive;
+	background-image:url('../media/beach.jpg');
+    background-repeat:no-repeat;
+    background-position:top left;
+	background-size:cover;
+    font-size:14pt;
+}
+
+h2{
+	font-family: 'Nixie One', cursive;
+	font-size:22pt;
+	text-align:center;
+	color:black;
+	font-weight:900;
+}
+.container {
+  width: 500px;
+  margin: 25px 0px 0px 25px;
+}
+
+form {
+  padding: 20px;
+  background:#e6d1cd;
+  border-radius: 4px;
+  box-shadow:2px 2px black;
+}
+form legend{
+	padding:5px;
+}
+form fieldset{
+	padding:5px;
+}
+form label,
+form input,
+form button {
+  border: 0;
+  margin-bottom: 3px;
+  display: block;
+  width: 100%;
+  color:black;
+  font-weight:900;
+}
+form input {
+  height: 25px;
+  line-height: 25px;
+  background: #fff;
+  color: black;
+  padding: 0 6px;
+  box-sizing: border-box;
+  border:1px solid black;
+  font-weight:400;
+}
+form button {
+  height: 30px;
+  line-height: 30px;
+  background: #af998f;
+  color: black;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius:20px;
+  box-shadow:2px 2px black;	
+}
+span {
+  color:red;
+  font-weight:900;
+  margin-bottom:20px;	
+}
+form .error {
+  color:red;
+  font-weight:900;	
+}
