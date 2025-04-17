@@ -101,7 +101,7 @@
 /* Style for the buttons */
 .button {
     background-color: rgb(245, 188, 0);
-    border: none;
+    border: #222222 solid 2px;
     color: rgb(245, 232, 212);
     padding: 10px 20px;
     font-family: "Press Start 2P", system-ui;

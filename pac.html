@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="media/favicon.ico">
+
+    <title>Pac-emon</title>
+</head>
+<style>
+    #gameCanvas {
+        box-shadow: 10px 10px 20px black;
+    }
+
+    h1{
+        text-align: center;
+        font-family: comic sans MS;
+        color: lightgray;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+    .button {
+      background-color: rgb(138, 3, 3);
+      border: rgb(245, 232, 212) 1px solid;
+      color: rgb(245, 232, 212);
+      padding: 10px 20px;
+      font-family: "Press Start 2P", system-ui;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 40px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+      background-color: rgb(13, 72, 148);
+      color: white;
+  }
+</style>
+<body style="background-image: url(media/arcadebg.jpg);">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <h1>Pac-émon</h1>
+      <canvas id="gameCanvas"></canvas>
+  
+      <nav style="margin-top: 20px; display: flex; gap: 20px; justify-content: center;">
+        <a href="index.html" class="button">Home</a>
+        <a href="readme2.txt" class="button">Read Me</a>
+      </nav>
+    </div>
+  
+    <script src="js/game.js" type="module"></script>
+  </body>
+  
+</html>
